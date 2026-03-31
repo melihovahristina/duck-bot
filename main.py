@@ -50,5 +50,11 @@ async def handler(event):
         pass
 
 
-client.start()
-client.run_until_disconnected()
+import asyncio
+
+async def main():
+    await client.start()
+    print("БОТ ЗАПУЩЕН")
+    await client.run_until_disconnected()
+
+asyncio.run(main())
